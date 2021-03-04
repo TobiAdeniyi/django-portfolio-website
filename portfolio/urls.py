@@ -7,7 +7,8 @@ from jobs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage, name='home')
+    path('', views.homepage, name='home'),
+    path('jobs/<int:job_id>', views.detail, name='detail'),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
