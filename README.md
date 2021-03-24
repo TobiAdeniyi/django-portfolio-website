@@ -17,6 +17,7 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#development">Development</a></li>
     <li><a href="#deployment">Deployment</a></li>
+    <li><a href="acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
