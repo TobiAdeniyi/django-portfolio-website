@@ -11,9 +11,9 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary><strong>Table of Contents</strong></summary>
   <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#about-this-project">About This Project</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#development">Development</a></li>
     <li><a href="#deployment">Deployment</a></li>
@@ -22,9 +22,13 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About
+## About This Project
 
 [![Product Name Screen Shot][website-screenshot]][website-url]
+
+<!-- DESCRIPTION -->
+
+### Description:
 
 In this project I will be showing my step by step process for building a Django Portfolio Website. Django—an open-source web framework that's designed on top of Python—can help you quickly bring your website ideas to life. I plan to illustrate my undestanding of Django for web development, by building my own website from the ground up. I will create a database, design the layout for your website, and add and update URL paths. Then I will connect my Django portfolio website to Postgres, and add static files, URLs and more.
 
@@ -102,7 +106,7 @@ Here are some instructions on how to get this project up and running. First you 
 
 <!-- DEPLOYMENT -->
 
-### Deployment
+## Deployment
 
 #### TODO
 
