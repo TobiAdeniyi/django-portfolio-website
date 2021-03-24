@@ -104,7 +104,7 @@ This is an example of how to list things you need to use the software and how to
 [issues-shield]: https://img.shields.io/github/issues/TobiAdeniyi/django-portfolio-website.svg?style=for-the-badge
 [issues-url]: https://github.com/TobiAdeniyi/django-portfolio-website/issues
 [license-shield]: https://img.shields.io/github/license/TobiAdeniyi/django-portfolio-website.svg?style=for-the-badge
-[license-url]: https://github.com/TobiAdeniyi/django-portfolio-website/blob/master/LICENSE.md
+[license-url]: https://github.com/TobiAdeniyi/django-portfolio-website/blob/main/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tobiloba-adeniyi/
 [product-screenshot]: images/projects/django_portfolio_website.png
