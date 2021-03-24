@@ -107,4 +107,4 @@ This is an example of how to list things you need to use the software and how to
 [license-url]: https://github.com/TobiAdeniyi/django-portfolio-website/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tobiloba-adeniyi/
-[product-screenshot]: images/projects/django_portfolio_project.png
+[product-screenshot]: images/projects/django_portfolio_website.png
