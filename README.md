@@ -13,7 +13,10 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <!-- TO DO: T.O.C -->
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#deployment">Deployment</a></li>
   </ol>
 </details>
 
@@ -21,9 +24,11 @@
 
 ## About
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][website-screenshot]][website-url]
 
 In this project I will be showing my step by step process for building a Django Portfolio Website. Django—an open-source web framework that's designed on top of Python—can help you quickly bring your website ideas to life. I plan to illustrate my undestanding of Django for web development, by building my own website from the ground up. I will create a database, design the layout for your website, and add and update URL paths. Then I will connect my Django portfolio website to Postgres, and add static files, URLs and more.
+
+<!-- KEY OBJECTIVES -->
 
 ### Key objectives:
 
@@ -39,47 +44,67 @@ In this project I will be showing my step by step process for building a Django 
 
 ## Getting Started
 
-### TODO
+Here are some instructions on how to get this project up and running. First you will need some some prerequsites to manage a local virtual environment. Bellow is a list of _'Bare Minimums'_ you need to follow along with this project.
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+- **[Python](https://www.python.org/downloads/)** 3.9.1
+- **[Pip](https://pip.pypa.io/en/stable/installing/)** 21.0.1
+- **[Anaconda](https://www.anaconda.com/products/individual)**
 
-### Prerequisites
+### Here is how we install them:
 
-This is an example of how to list things you need to use the software and how to install them.
+- Check if `python` and `pip` are installed
 
-- npm
   ```sh
-  # npm install npm@latest -g
+  python --version
+  python -m pip --version
   ```
 
-### Installation
+- If `python` is notinstalled, you can download it from the [Python website](https://www.python.org/downloads/). If `pip` is not installed, run the following command or [check out](https://pip.pypa.io/en/stable/installing/)
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+  ```sh
+  python get-pip.py pip==21.0.1
+  ```
+
+### Installations:
+
+1. Create a directory for the project, then download or clone project the project into the directory by simply run the following command in your terminal
+
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   mkdir project
+   cd project
+   git clone https://github.com/TobiAdeniyi/django-portfolio-website
    ```
-3. Install NPM packages
+
+2. Install and activate the virtual environment, using `pip` as so
+
    ```sh
-   npm install
+   python -m venv portfolio_website_environment
+   source portfolio_website_environment/bin/activate
+   python -m pip install requirements.txt
+   pip list
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+
+   Or alternatively, if you have **Anaconda** installed, create and activate a virtual environment, using `conda`, by running the following command
+
+   ```sh
+   conda env create -f environment.yml
+   conda activate portfolio_website_environment
+   conda env list
    ```
 
-<!-- USAGE EXAMPLES -->
+3. **TODO**
 
-## Usage
+<!-- DEVELOPMENT -->
 
-### TODO
+## Development
 
-<!-- ROADMAP -->
+#### TODO
 
-## Roadmap
+<!-- DEPLOYMENT -->
 
-### TODO
+### Deployment
+
+#### TODO
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -103,9 +128,9 @@ This is an example of how to list things you need to use the software and how to
 [stars-url]: https://github.com/TobiAdeniyi/django-portfolio-website/stargazers
 [issues-shield]: https://img.shields.io/github/issues/TobiAdeniyi/django-portfolio-website.svg?style=for-the-badge
 [issues-url]: https://github.com/TobiAdeniyi/django-portfolio-website/issues
-<!-- [license-shield]: https://img.shields.io/github/license/TobiAdeniyi/django-portfolio-website.svg?style=for-the-badge -->
 [license-shield]: https://img.shields.io/github/license/TobiAdeniyi/django-portfolio-website?style=for-the-badge
 [license-url]: https://github.com/TobiAdeniyi/django-portfolio-website/blob/main/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tobiloba-adeniyi/
-[product-screenshot]: images/projects/django_portfolio_website.png
+[website-screenshot]: images/projects/django_portfolio_website.png
+[website-url]: https://git.heroku.com/tobi-django-portfolio-website.git
