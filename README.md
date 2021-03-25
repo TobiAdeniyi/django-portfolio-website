@@ -100,13 +100,103 @@ Here are some instructions on how to get this project up and running. First you 
 
 #### TODO
 
+#### Saving Environment Variables
+
+Take **private** environment veriables from `SECRET_KEY` in **setings.py**, and store it as a environment variable that is `export` and `unset` when virtual environment is activated. This is done by creating a subdirectory file
+
+```sh
+cd $CONDA_PREFIX
+mkdir -p ./etc/conda/activate.d
+mkdir -p ./etc/conda/deactivate.d
+touch ./etc/conda/activate.d/portfolio_website_env.sh
+touch ./etc/conda/deactivate.d/portfolio_website_env.sh
+```
+
+Then edit `./etc/conda/activate.d/portfolio_website_env.sh` and `./etc/conda/deactivate.d/portfolio_website_env.sh` respectively, as so
+
+```sh
+#!/bin/sh
+
+export SECRET_KEY='secret-key-from-settings'
+export DATABASE_URL='databse-url-from-heroku' # $(heroku config:get DATABASE_URL -a your-app)
+export SECRET_PASSWORD='postgresql-password-from-postgresql'
+```
+
+```sh
+#!/bin/sh
+
+unset SECRET_KEY
+unset DATABASE_URL
+unset SECRET_PASSWORD
+```
+
+For more information check out [Saving environment variables](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#saving-environment-variables) in the Anaconda Docs, and [Connecting Heroku to Postgres](https://devcenter.heroku.com/articles/connecting-to-heroku-postgres-databases-from-outside-of-heroku) in Heroku docs.
+
+Ensure to replace `SECRET_KEY` value in **setings.py**, for example
+
+```python
+import os
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
+```
+
 <!-- DEPLOYMENT -->
 
-### Deployment
+## Deployment
 
 #### TODO
 
-https://devcenter.heroku.com/articles/deploying-python
+- https://devcenter.heroku.com/articles/deploying-python
+- https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-python
+
+#### Instilations
+
+```sh
+pip install gunicorn install django-heroku
+```
+
+#### Procfile
+
+```sh
+echo "web: gunicorn portfolio.wsgi" >> Procfile
+```
+
+#### requirements.txt
+
+```sh
+python -m pip freeze > requirements.txt
+```
+
+#### environment.yml
+
+```sh
+conda env export > environment.yml
+```
+
+#### Export important variable to heroku
+
+```sh
+heroku config:set SECRET_KEY=$SECRET_KEY
+heroku config:set DATABASE_URL=$DATABASE_URL
+heroku config:set SECRET_PASSWORD=$SECRET_PASSWORD
+
+HEROKU CONFIG
+
+python manage.py collectstatic
+
+PGUSER=postgres PGPASSWORD=SECTRET_PASSWORD
+heroku pg:push postgresqldb DATABASE_URL --app heroku-app-name
+```
+
+#### Run locally
+
+```sh
+heroku local
+git add .
+git commit -m "Done :exclamation:"
+git push heroku main
+heroku open
+```
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -135,4 +225,4 @@ https://devcenter.heroku.com/articles/deploying-python
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tobiloba-adeniyi/
 [website-screenshot]: images/projects/django_portfolio_website.png
-[website-url]: https://git.heroku.com/tobi-django-portfolio-website.git
+[website-url]: https://tobi-django-portfolio-website.herokuapp.com/
