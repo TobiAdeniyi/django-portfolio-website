@@ -1,5 +1,6 @@
 import os
 import django_heroku
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,6 +78,8 @@ DATABASES = {
     }
 }
 
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -123,3 +126,5 @@ MEDIA_ROOT = BASE_DIR
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+DATABASES['default'] = dj_database_url.config(
+    conn_max_age=600, ssl_require=True)
