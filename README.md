@@ -111,6 +111,8 @@ Here are some instructions on how to get this project up and running. First you 
 
 #### TODO
 
+https://devcenter.heroku.com/articles/deploying-python
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
